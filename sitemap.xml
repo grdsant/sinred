@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página Principal -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://grdsant.github.io/sinred/Logo512x512.png</image:loc>
+      <image:title>SinRed Logo</image:title>
+      <image:caption>Soluciones Web Profesionales</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grdsant.github.io/sinred/Fondo.jpg</image:loc>
+      <image:title>Background Hero</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://grdsant.github.io/sinred/Servidores.jpg</image:loc>
+      <image:title>Servidores y Tecnología</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://grdsant.github.io/sinred/Teclado.jpg</image:loc>
+      <image:title>Nuestro Equipo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Sección Inicio -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/#inicio</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Sección Nosotros -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/#nosotros</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Sección Servicios -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/#servicios</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Sección Tecnologías -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/#tecnologias</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Sección Contacto -->
+  <url>
+    <loc>https://grdsant.github.io/sinred/#contacto</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>

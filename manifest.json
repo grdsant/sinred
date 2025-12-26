@@ -1,0 +1,26 @@
+{
+  "name": "Sinred",
+  "short_name": "Sinred",
+  "background_color": "#22335F",
+  "theme_color": "#22335F",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+
+    {
+      "src": "Logo512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "wide",
+      "label": "Wonder 512x512"
+    },
+    {
+      "src": "Logo512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "narrow",
+      "label": "Wonder 512x512"
+    }
+  ]
+}

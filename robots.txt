@@ -1,0 +1,41 @@
+# robots.txt para SinRed
+# Permite el rastreo completo del sitio por todos los buscadores
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos innecesarios
+Disallow: /js.js
+Disallow: /scripts.js
+Disallow: /*.css$
+
+# Permitir rastreo de imágenes
+User-agent: Googlebot-Image
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap
+Sitemap: https://grdsant.github.io/sinred/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SinRed - Soluciones Web Profesionales</title>
+    <meta name="description" content="SinRed - Empresa líder en diseño y desarrollo de páginas web profesionales en México. Más de 20 años de experiencia en desarrollo web, optimización SEO, aplicaciones móviles y soluciones tecnológicas personalizadas. Contacta con expertos en Ixtapaluca, Estado de México.">
+    <meta name="author" content="SinRed">
+    <meta name="keywords" content="diseño web, desarrollo web, SEO, páginas web, aplicaciones web, marketing digital, diseño web México, desarrollo web profesional, tiendas en línea, ecommerce, páginas web responsivas, PWA, aplicaciones móviles, React, Angular, Blazor, optimización SEO México, agencia web Ixtapaluca, desarrollo web Estado de México">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://grdsant.github.io/sinred/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://grdsant.github.io/sinred/sitemap.xml">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="MX-MEX">
+    <meta name="geo.placename" content="Ixtapaluca">
+    <meta name="geo.position" content="19.328092;-98.884023">
+    <meta name="ICBM" content="19.328092, -98.884023">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grdsant.github.io/sinred/">
+    <meta property="og:title" content="SinRed - Soluciones Web Profesionales | Desarrollo Web México">
+    <meta property="og:description" content="Empresa líder en diseño y desarrollo web con +20 años de experiencia. Especialistas en páginas web, tiendas en línea, SEO y aplicaciones móviles en México.">
+    <meta property="og:image" content="https://grdsant.github.io/sinred/Logo512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="SinRed Logo - Soluciones Web Profesionales">
+    <meta property="og:site_name" content="SinRed">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SinRed - Soluciones Web Profesionales | Desarrollo Web México">
+    <meta name="twitter:description" content="Empresa líder en diseño y desarrollo web con +20 años de experiencia. Especialistas en páginas web, tiendas en línea, SEO y aplicaciones móviles en México.">
+    <meta name="twitter:image" content="https://grdsant.github.io/sinred/Logo512x512.png">
+    <meta name="twitter:image:alt" content="SinRed Logo - Soluciones Web Profesionales">
+    <meta name="twitter:creator" content="@SinRed">
+    <meta name="twitter:site" content="@SinRed">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        'primary-dark': '#1d4ed8',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles-tailwind.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "SinRed",
+      "image": "https://grdsant.github.io/sinred/Logo512x512.png",
+      "@id": "https://grdsant.github.io/sinred/",
+      "url": "https://grdsant.github.io/sinred/",
+      "telephone": "+52-55-5504-7761",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Geovillas Jesús María",
+        "addressLocality": "Ixtapaluca",
+        "addressRegion": "Estado de México",
+        "postalCode": "56586",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.328092,
+        "longitude": -98.884023
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/sinred",
+        "https://twitter.com/sinred",
+        "https://www.instagram.com/sinred",
+        "https://www.linkedin.com/company/sinred"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "50"
+      },
+      "description": "Empresa líder en diseño y desarrollo de páginas web profesionales en México con más de 20 años de experiencia. Especialistas en desarrollo web, optimización SEO, aplicaciones móviles y soluciones tecnológicas personalizadas.",
+      "founder": {
+        "@type": "Person",
+        "name": "Gustavo de los Santos"
+      },
+      "foundingDate": "2014",
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Web",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño Web Personalizado",
+              "description": "Diseños únicos y atractivos que reflejan la identidad de tu marca"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optimización SEO",
+              "description": "Mejora tu visibilidad en los motores de búsqueda"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tiendas en Línea",
+              "description": "Vende tus productos en internet con una tienda profesional"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aplicaciones Web Progresivas (PWA)",
+              "description": "Convierte tu sitio web en una aplicación móvil"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SinRed",
+      "url": "https://grdsant.github.io/sinred/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://grdsant.github.io/sinred/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SinRed",
+      "url": "https://grdsant.github.io/sinred/",
+      "logo": "https://grdsant.github.io/sinred/Logo512x512.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-55-5504-7761",
+        "contactType": "customer service",
+        "email": "gustavodelossantos@hotmail.com",
+        "areaServed": "MX",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    }
+    </script>
+</head>
+<body class="font-['Poppins'] text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center">
+                    <img src="Logo.png" alt="SinRed Logo" class="h-24 w-auto">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#inicio" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Inicio</a></li>
+                    <li><a href="#nosotros" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Nosotros</a></li>
+                    <li><a href="#servicios" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Servicios</a></li>
+                    <li><a href="#tecnologias" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Tecnologías</a></li>
+                    <li><a href="#contacto" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">Contacto</a></li>
+                </ul>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Inicio</a></li>
+                    <li><a href="#nosotros" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Nosotros</a></li>
+                    <li><a href="#servicios" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Servicios</a></li>
+                    <li><a href="#tecnologias" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Tecnologías</a></li>
+                    <li><a href="#contacto" class="block px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors text-center">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Fondo.jpg" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-dark/90"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center text-white" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Soluciones Web Profesionales</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-100">Diseño y desarrollo de páginas web a medida, optimizadas para resultados excepcionales.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="#contacto" class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">Solicitar Cotización</a>
+                    <a href="#servicios" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1">Nuestros Servicios</a>
+                </div>
+                <!-- Hero Image -->
+                <div class="mt-12" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Servidores.jpg" alt="Servidores y Tecnología" class="rounded-2xl shadow-2xl mx-auto max-w-4xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Sobre <span class="text-primary">Nosotros</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Conoce más sobre nuestro equipo y experiencia</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="Teclado.jpg" alt="Nuestro Equipo" class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Más de 20 años de experiencia en desarrollo web</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">En SinRed, nos enorgullece ofrecer soluciones tecnológicas de vanguardia respaldadas por más de una década de experiencia en el desarrollo web. Nuestro equipo de expertos está comprometido con la excelencia y la innovación en cada proyecto que emprendemos.</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Nos mantenemos a la vanguardia de las últimas tendencias y tecnologías para ofrecerte soluciones personalizadas que impulsen el crecimiento de tu negocio en el mundo digital.</p>
+                    <div class="grid grid-cols-3 gap-6 mt-8">
+                        <div class="text-center">
+                            <span class="block text-4xl font-bold text-primary stat-number" data-count="10">0</span>
+                            <span class="text-sm text-gray-600 mt-2 block">Años de Experiencia</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-4xl font-bold text-primary stat-number" data-count="200">0</span>
+                            <span class="text-sm text-gray-600 mt-2 block">Proyectos Completados</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-4xl font-bold text-primary stat-number" data-count="50">0</span>
+                            <span class="text-sm text-gray-600 mt-2 block">Clientes Satisfechos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros <span>Servicios</span></h2>
+                <p class="section-subtitle">Soluciones personalizadas para tus necesidades digitales</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Diseño Web Personalizado</h3>
+                    <p>Diseños únicos y atractivos que reflejan la identidad de tu marca y cautivan a tus visitantes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Sitios web que se adaptan perfectamente a cualquier dispositivo, desde móviles hasta escritorios.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Aplicaciones Web Progresivas (PWA)</h3>
+                    <p>Convierte tu sitio web en una aplicación móvil con capacidades offline y notificaciones push.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Optimización SEO</h3>
+                    <p>Mejora tu visibilidad en los motores de búsqueda y atrae más tráfico cualificado a tu sitio web.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Web</h3>
+                    <p>Protege tu sitio web contra amenazas cibernéticas con nuestras soluciones de seguridad avanzadas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Tiendas en Línea</h3>
+                    <p>Vende tus productos en internet con una tienda en línea profesional y fácil de administrar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tecnologias" class="section technologies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tecnologías <span>que utilizamos</span></h2>
+                <p class="section-subtitle">Trabajamos con las mejores herramientas del mercado</p>
+            </div>
+            <div class="technologies-grid">
+                <div class="tech-item" data-aos="fade-up">
+                    <img src="HTML5_logo_and_wordmark.svg.png" alt="HTML5">
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="50">
+                    <img src="cssLogo.png" alt="CSS3">
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="150">
+                    <img src="React.svg.png" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Angular.png" alt="Angular">
+                    <span>Angular</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="250">
+                    <img src="Blazor.png" alt="Blazor">
+                    <span>Blazor</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="SQL server.png" alt="SQL Server">
+                    <span>SQL Server</span>
+                </div>
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="350">
+                    <img src="Postgresql_elephant.svg.png" alt="PostgreSQL">
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contácta<span>nos</span></h2>
+                <p class="section-subtitle">Estamos listos para hacer realidad tu proyecto</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Ubicación</h3>
+                            <p>Geovillas Jesús María, Ixtapaluca, México</p>
+                            <a href="https://maps.app.goo.gl/mbR9fKy7ALy5toFE6" class="map-link" target="_blank">Ver en mapa <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Teléfono</h3>
+                            <p>+52 55 5504 7761</p>
+                            <a href="https://api.whatsapp.com/send?phone=525555047761&text=Hola!%20Quiero%20contratar%20sus%20servicios!" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Correo Electrónico</h3>
+                            <p>gustavodelossantos@hotmail.com</p>
+                            <a href="mailto:gustavodelossantos@hotmail.com" class="email-link">Enviar correo <i class="fas fa-paper-plane"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" class="form" action="https://formsubmit.co/gustavodelossantos@hotmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde SinRed">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://grdsant.github.io/sinred/#contacto">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="Diseño Web">Diseño Web</option>
+                                <option value="Tienda en Línea">Tienda en Línea</option>
+                                <option value="SEO y Marketing Digital">SEO y Marketing Digital</option>
+                                <option value="Aplicación Móvil">Aplicación Móvil</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4226.011057990175!2d-98.88402315875594!3d19.328092294517973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce1e4a764de5e9%3A0x771d3c9d90f23b41!2sGeovillas%20Jesus%20Maria%2C%2056586%20Ixtapaluca%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1708050200117!5m2!1ses-419!2smx" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo.png" alt="SinRed Logo" class="h-24 w-auto">
+                    <p>Soluciones web profesionales para impulsar tu negocio en el mundo digital.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#tecnologias">Tecnologías</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Nuestros Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Diseño Web</a></li>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Aplicaciones Móviles</a></li>
+                        <li><a href="#servicios">SEO y Marketing Digital</a></li>
+                        <li><a href="#servicios">Mantenimiento Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Geovillas Jesús María, Ixtapaluca, México</li>
+                        <li><i class="fas fa-phone"></i> +52 55 5504 7761</li>
+                        <li><i class="fas fa-envelope"></i> gustavodelossantos@hotmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SinRed. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos y condiciones</a>
+                    <span>|</span>
+                    <a href="#">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://api.whatsapp.com/send?phone=525555047761&text=Hola!%20Quiero%20contratar%20sus%20servicios!" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
