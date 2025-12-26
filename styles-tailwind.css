@@ -334,8 +334,10 @@ html {
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 80px;
     margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
 }
 
 .footer-logo p {
