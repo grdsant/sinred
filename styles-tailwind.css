@@ -1,5 +1,31 @@
 /* Estilos personalizados adicionales para complementar Tailwind CSS */
 
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --border-color: #e5e7eb;
+}
+
+.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-bg: #1e293b;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --border-color: #334155;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
@@ -49,11 +75,11 @@ html {
     font-size: 1.875rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #1f2937;
+    color: var(--text-primary);
 }
 
 .about-text p {
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.7;
 }
@@ -78,13 +104,13 @@ html {
 
 .stat-label {
     display: block;
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-top: 0.5rem;
 }
 
 /* Services Section */
 .services-section {
-    background-color: #f8fafc;
+    background-color: var(--bg-secondary);
     padding: 6rem 0;
 }
 
@@ -96,7 +122,7 @@ html {
 .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
@@ -105,7 +131,7 @@ html {
 }
 
 .section-subtitle {
-    color: #6b7280;
+    color: var(--text-secondary);
     font-size: 1.125rem;
     max-width: 700px;
     margin: 0 auto;
@@ -119,12 +145,13 @@ html {
 }
 
 .service-card {
-    background: white;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
     transition: all 0.3s ease;
     text-align: center;
+    border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
@@ -149,11 +176,11 @@ html {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1f2937;
+    color: var(--text-primary);
 }
 
 .service-card p {
-    color: #6b7280;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -172,10 +199,11 @@ html {
 .tech-item {
     text-align: center;
     padding: 1.5rem;
-    background: white;
+    background: var(--card-bg);
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
     transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .tech-item:hover {
@@ -193,12 +221,12 @@ html {
 .tech-item span {
     display: block;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--text-primary);
 }
 
 /* Contact Section */
 .contact-section {
-    background-color: #f8fafc;
+    background-color: var(--bg-secondary);
     padding: 6rem 0;
 }
 
@@ -218,10 +246,11 @@ html {
 .contact-item {
     display: flex;
     gap: 1.5rem;
-    background: white;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
+    border: 1px solid var(--border-color);
 }
 
 .contact-icon {
@@ -241,11 +270,11 @@ html {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #1f2937;
+    color: var(--text-primary);
 }
 
 .contact-text p {
-    color: #6b7280;
+    color: var(--text-secondary);
     margin-bottom: 0.75rem;
 }
 
@@ -260,10 +289,11 @@ html {
 }
 
 .contact-form {
-    background: white;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -273,10 +303,12 @@ html {
 .form-control {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .form-control:focus {
@@ -316,7 +348,13 @@ html {
     margin-top: 3rem;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.dark .map-container iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(0.9) contrast(0.9);
 }
 
 /* Footer */

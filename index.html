@@ -42,6 +42,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logo.png">
+    <meta name="theme-color" content="#ffffff">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +63,20 @@
                         accent: '#3b82f6',
                     }
                 }
-            }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    
+    <script>
+        // Check for dark mode preference and apply it immediately to prevent flash
+        const isDark = localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0f172a');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
         }
     </script>
     
@@ -214,9 +228,9 @@
     }
     </script>
 </head>
-<body class="font-['Poppins'] text-gray-800">
+<body class="font-['Poppins'] text-gray-800 dark:text-gray-100 bg-white dark:bg-slate-900 transition-colors duration-300">
     <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header class="fixed top-0 left-0 w-full bg-white dark:bg-slate-900 shadow-md z-50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center justify-between h-20">
                 <a href="#" class="flex items-center">
@@ -225,28 +239,38 @@
                 
                 <!-- Desktop Navigation -->
                 <ul class="hidden md:flex items-center space-x-8">
-                    <li><a href="#inicio" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Inicio</a></li>
-                    <li><a href="#nosotros" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Nosotros</a></li>
-                    <li><a href="#servicios" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Servicios</a></li>
-                    <li><a href="#tecnologias" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Tecnologías</a></li>
+                    <li><a href="#inicio" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-300">Inicio</a></li>
+                    <li><a href="#nosotros" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-300">Nosotros</a></li>
+                    <li><a href="#servicios" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-300">Servicios</a></li>
+                    <li><a href="#tecnologias" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-300">Tecnologías</a></li>
+                    <li>
+                        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors text-gray-700" aria-label="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                     <li><a href="#contacto" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">Contacto</a></li>
                 </ul>
                 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menú">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <div class="flex items-center space-x-2 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-gray-700 dark:text-gray-300" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-gray-700 dark:text-gray-300" aria-label="Menú">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </nav>
             
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <ul class="space-y-2">
-                    <li><a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Inicio</a></li>
-                    <li><a href="#nosotros" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Nosotros</a></li>
-                    <li><a href="#servicios" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Servicios</a></li>
-                    <li><a href="#tecnologias" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Tecnologías</a></li>
+                    <li><a href="#inicio" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Inicio</a></li>
+                    <li><a href="#nosotros" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Nosotros</a></li>
+                    <li><a href="#servicios" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Servicios</a></li>
+                    <li><a href="#tecnologias" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Tecnologías</a></li>
                     <li><a href="#contacto" class="block px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors text-center">Contacto</a></li>
                 </ul>
             </div>
@@ -279,32 +303,32 @@
     </section>
 
     <!-- About Section -->
-    <section id="nosotros" class="py-20 bg-white">
+    <section id="nosotros" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Sobre <span class="text-primary">Nosotros</span></h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Conoce más sobre nuestro equipo y experiencia</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Sobre <span class="text-primary">Nosotros</span></h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Conoce más sobre nuestro equipo y experiencia</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
                     <img src="Teclado.jpg" alt="Nuestro Equipo" class="rounded-2xl shadow-2xl w-full h-auto">
                 </div>
                 <div data-aos="fade-left">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Más de 20 años de experiencia en desarrollo web</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">En SinRed, nos enorgullece ofrecer soluciones tecnológicas de vanguardia respaldadas por más de una década de experiencia en el desarrollo web. Nuestro equipo de expertos está comprometido con la excelencia y la innovación en cada proyecto que emprendemos.</p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">Nos mantenemos a la vanguardia de las últimas tendencias y tecnologías para ofrecerte soluciones personalizadas que impulsen el crecimiento de tu negocio en el mundo digital.</p>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Más de 20 años de experiencia en desarrollo web</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">En SinRed, nos enorgullece ofrecer soluciones tecnológicas de vanguardia respaldadas por más de una década de experiencia en el desarrollo web. Nuestro equipo de expertos está comprometido con la excelencia y la innovación en cada proyecto que emprendemos.</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">Nos mantenemos a la vanguardia de las últimas tendencias y tecnologías para ofrecerte soluciones personalizadas que impulsen el crecimiento de tu negocio en el mundo digital.</p>
                     <div class="grid grid-cols-3 gap-6 mt-8">
                         <div class="text-center">
                             <span class="block text-4xl font-bold text-primary stat-number" data-count="10">0</span>
-                            <span class="text-sm text-gray-600 mt-2 block">Años de Experiencia</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400 mt-2 block">Años de Experiencia</span>
                         </div>
                         <div class="text-center">
                             <span class="block text-4xl font-bold text-primary stat-number" data-count="200">0</span>
-                            <span class="text-sm text-gray-600 mt-2 block">Proyectos Completados</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400 mt-2 block">Proyectos Completados</span>
                         </div>
                         <div class="text-center">
                             <span class="block text-4xl font-bold text-primary stat-number" data-count="50">0</span>
-                            <span class="text-sm text-gray-600 mt-2 block">Clientes Satisfechos</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400 mt-2 block">Clientes Satisfechos</span>
                         </div>
                     </div>
                 </div>
@@ -316,8 +340,8 @@
     <section id="servicios" class="section services-section">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestros <span>Servicios</span></h2>
-                <p class="section-subtitle">Soluciones personalizadas para tus necesidades digitales</p>
+                <h2>Nuestros <span class="text-primary">Servicios</span></h2>
+                <p class="section-subtitle dark:text-gray-400">Soluciones personalizadas para tus necesidades digitales</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -370,8 +394,8 @@
     <section id="tecnologias" class="section technologies-section">
         <div class="container">
             <div class="section-header">
-                <h2>Tecnologías <span>que utilizamos</span></h2>
-                <p class="section-subtitle">Trabajamos con las mejores herramientas del mercado</p>
+                <h2 class="dark:text-white">Tecnologías <span class="text-primary">que utilizamos</span></h2>
+                <p class="section-subtitle dark:text-gray-400">Trabajamos con las mejores herramientas del mercado</p>
             </div>
             <div class="technologies-grid">
                 <div class="tech-item" data-aos="fade-up">
@@ -414,8 +438,8 @@
     <section id="contacto" class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <h2>Contácta<span>nos</span></h2>
-                <p class="section-subtitle">Estamos listos para hacer realidad tu proyecto</p>
+                <h2 class="dark:text-white">Contácta<span>nos</span></h2>
+                <p class="section-subtitle dark:text-gray-400">Estamos listos para hacer realidad tu proyecto</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
@@ -492,12 +516,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-gray-900 dark:bg-slate-950">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="Logo.png" alt="SinRed Logo" class="h-24 w-auto">
-                    <p>Soluciones web profesionales para impulsar tu negocio en el mundo digital.</p>
+                    <img src="Logo.png" alt="SinRed Logo" class="h-24 w-auto dark:brightness-100">
+                    <p class="text-gray-400">Soluciones web profesionales para impulsar tu negocio en el mundo digital.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -527,7 +551,7 @@
                 </div>
                 <div class="footer-contact">
                     <h3>Contacto</h3>
-                    <ul>
+                    <ul class="text-gray-400">
                         <li><i class="fas fa-map-marker-alt"></i> Geovillas Jesús María, Ixtapaluca, México</li>
                         <li><i class="fas fa-phone"></i> +52 55 5504 7761</li>
                         <li><i class="fas fa-envelope"></i> gustavodelossantos@hotmail.com</li>
